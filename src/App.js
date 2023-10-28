@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { initiateWindow } from "./initiateWindow";
+import { WelcomeWidget } from "./WelcomeTemplate/WelcomeWidget";
+const App = () => {
+  initiateWindow();
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div
+        className="container"
+        style={{ fontSize: "25px", fontWeight: "700" }}
+      >
+        Kore AI WebSDK New Version
+      </div>
+      <WelcomeWidget />
+    </>
   );
-}
+};
 
 export default App;
